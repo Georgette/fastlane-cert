@@ -13,7 +13,7 @@ Node wrapper for [Ruby Fastlane Cert ](https://github.com/fastlane/cert)module
 var cert = require('fastlane-cert')
 
 cert({
-    user       : 'firstname@email.com'
+    user       : 'firstname@email.com',
     path       : '/Users/username/appname appname.xcodeproj'
 }, (err, result) => {
     console.log(`STDOUT:\n${result.stdout}`)
@@ -54,7 +54,7 @@ Accepts options as an object; see tables below for a list of both runtime option
 |Runtime Option |Example|Description|
 |----------------|-------|-----------|
 |timeout (number)| { timeout:0 } | specify when to exit execution in case of error |
-|password (string)| {password:''} | app store password for signing|
+|password (string)| {password:''} | app store password |
 |path (string)| {path:'/'} | path of directory where Cert executes|
 
 ## install

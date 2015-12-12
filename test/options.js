@@ -32,7 +32,7 @@ test('accepts a profile option of output path', (t) => {
     t.plan(1)
     exec.reset()
     cert({ output: '/' }, () => {
-        t.ok(exec.calledWith('cert -o /'), 'cert called with directory where provisioning file is placed')
+        t.ok(exec.calledWith('cert -o /'), 'generate cert in particular directory -o')
     })
 })
 
@@ -40,7 +40,7 @@ test('accepts a profile option of keychainPath ', (t) => {
     t.plan(1)
     exec.reset()
     cert({ keychainPath: '/' }, () => {
-        t.ok(exec.calledWith('cert -k /'), 'cert called with a custom keychain path')
+        t.ok(exec.calledWith('cert -k /'), 'cert called with a custom keychain path -k')
     })
 })
 
@@ -48,7 +48,7 @@ test('accepts a profile option teamId', (t) => {
     t.plan(1)
     exec.reset()
     cert({ teamId: 'ejoi' }, () => {
-        t.ok(exec.calledWith('cert -b ejoi'), 'cert called with teamId specified')
+        t.ok(exec.calledWith('cert -b ejoi'), 'cert called with teamId specified -b')
     })
 })
 
@@ -56,15 +56,7 @@ test('accepts a profile option teamName', (t) => {
     t.plan(1)
     exec.reset()
     cert({ teamName: 'teamA' }, () => {
-        t.ok(exec.calledWith('cert -l teamA'), 'cert called with teamName specified')
-    })
-})
-
-test('accepts a profile option of output path', (t) => {
-    t.plan(1)
-    exec.reset()
-    cert({ outputPath: '/' }, () => {
-        t.ok(exec.calledWith('cert -o /'), 'cert called with directory where provisioning file is placed')
+        t.ok(exec.calledWith('cert -l teamA'), 'cert called with teamName specified -l')
     })
 })
 
@@ -72,7 +64,7 @@ test('accepts an option of force', (t) => {
     t.plan(1)
     exec.reset()
     cert({ force: true }, () => {
-        t.ok(exec.calledWith('cert --force'), 'cert called with force provision renewal flag')
+        t.ok(exec.calledWith('cert --force'), 'cert called with force provision renewal flag --force')
     })
 })
 

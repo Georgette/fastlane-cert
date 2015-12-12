@@ -16,7 +16,7 @@ function cert (options, cb) {
     if (options.user)           cmd += ` -u ${options.user}`
     if (options.teamId)         cmd += ` -b ${options.teamId}`
     if (options.teamName)       cmd += ` -l ${options.teamName}`
-    if (options.output)         cmd += ` -o ${options.outputPath}`
+    if (options.output)         cmd += ` -o ${options.output}`
     if (options.keychainPath)   cmd += ` -k ${options.keychainPath}`
     if (options.development)    cmd += ' --development'
     if (options.force)          cmd += ' --force'

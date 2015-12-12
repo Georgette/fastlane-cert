@@ -1,10 +1,10 @@
-require('..')
+var cert = require('..')
 
 // Need to change path and user
 
 cert({
-    user       : 'firstname@email.com'
-    path       : '/Users/username/appname appname.xcodeproj'
+    user: 'firstname@email.com',
+    path: '/Users/username/appname appname.xcodeproj'
 }, (err, result) => {
     console.log(`STDOUT:\n${result.stdout}`)
     console.log(`STDERR:\n${result.stderr}`)
