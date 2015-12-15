@@ -1,6 +1,6 @@
 {
   "name": "fastlane-cert",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "node wrapper for ruby fastlane cert module",
   "main": "index.js",
   "repository": {
@@ -28,9 +28,9 @@
     "snazzy": "~2.0.1",
     "tape": "~4.2.1"
   },
-  "engineStrict" : true,
+  "engineStrict": true,
   "engines": {
-      "node": ">=4.0"
+    "node": ">=4.0"
   },
   "scripts": {
     "test": "npm run -s faucet && npm run -s lint && npm run -s check-cover",
@@ -45,10 +45,10 @@
     "view-cover": "istanbul report text",
     "open-cover": "open coverage/lcov-report/index.html"
   },
-  "keywords":[
-      "fastlane",
-      "cert",
-      "ios",
-      "wrapper"
+  "keywords": [
+    "fastlane",
+    "cert",
+    "ios",
+    "wrapper"
   ]
 }
